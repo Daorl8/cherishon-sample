@@ -1,0 +1,11 @@
+.git
+.git/**
+wrangler.toml
+.assetsignore
+README.md
+CHANGELOG.md
+STRUCTURE.md
+_manifest.json
+_*.png
+_*.jpg
+index_*.html
