@@ -169,7 +169,24 @@ header.solid .burger span{background:var(--ink)}
 .btn-lineD{border:1px solid rgba(255,255,255,.4);color:#fff;font-weight:500;font-size:14px;padding:11px 20px;border-radius:999px;transition:background .2s}
 .btn-lineD:hover{background:rgba(255,255,255,.12)}
 
+/* emblem */
+.emblem{display:block;width:122px;height:auto;margin:0 auto 16px}
+
+/* reservation */
+.resv{background:var(--cream);padding:clamp(62px,9vw,104px) 0}
+.resv-head{text-align:center;max-width:640px;margin:0 auto clamp(28px,4vw,44px)}
+.resv-head h2{font-family:var(--serif);font-weight:500;font-size:clamp(1.9rem,5vw,2.7rem);margin-top:8px}
+.resv-head p{margin-top:14px;color:var(--ink2);font-size:15.5px;line-height:1.8}
+.resv-grid{display:grid;grid-template-columns:1fr;gap:14px;max-width:900px;margin:0 auto}
+@media(min-width:720px){.resv-grid{grid-template-columns:1fr 1fr}}
+.resv-card{background:var(--paper);border:1px solid var(--line);border-radius:13px;padding:22px 22px}
+.resv-card .en{font-family:var(--serif);font-style:italic;color:var(--brick);font-size:13px}
+.resv-card h3{font-family:var(--sans);font-weight:600;font-size:1.08rem;margin:4px 0 8px}
+.resv-card p{color:var(--ink2);font-size:14px;line-height:1.8}
+.resv-cta{text-align:center;margin-top:30px}
+
 /* footer */
+.f-emblem{width:70px;height:auto;margin-bottom:16px;filter:brightness(0) invert(1);opacity:.9}
 footer{background:#221d19;color:#efe9de;padding:52px 0 40px}
 footer .f-brand{font-family:var(--serif);font-weight:500;font-size:1.5rem;letter-spacing:.03em}
 footer .f-tag{font-family:var(--serif);font-style:italic;margin-top:12px;color:#c6bbab;font-size:15px;line-height:1.7;max-width:26rem}
@@ -209,6 +226,7 @@ body{padding-bottom:74px}
       <a href="#story">소개</a>
       <a href="#menu">메뉴</a>
       <a href="#gallery">갤러리</a>
+      <a href="#info">예약 안내</a>
       <a href="#visit">오시는 길</a>
     </nav>
     <a class="book" href="https://naver.me/5bXZ089B" target="_blank" rel="noopener">네이버 예약·위치</a>
@@ -217,7 +235,7 @@ body{padding-bottom:74px}
 </header>
 <div class="drawer" id="drawer">
   <nav aria-label="모바일 메뉴">
-    <a href="#story">소개</a><a href="#menu">메뉴</a><a href="#gallery">갤러리</a><a href="#visit">오시는 길</a>
+    <a href="#story">소개</a><a href="#menu">메뉴</a><a href="#gallery">갤러리</a><a href="#info">예약 안내</a><a href="#visit">오시는 길</a>
     <a href="https://naver.me/5bXZ089B" target="_blank" rel="noopener">네이버 예약·위치 &rarr;</a>
   </nav>
 </div>
@@ -241,9 +259,9 @@ body{padding-bottom:74px}
 
   <!-- INTRO -->
   <section class="intro wrap">
-    <span class="rv" style="display:inline-block"><svg class="leaf" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21c-1-7-4-9-4-13a4 4 0 0 1 8 0c0 4-3 6-4 13Z"/><path d="M12 8v13"/></svg></span>
-    <p class="lead rv">신선한 재료로 <em>매일 직접</em> 만드는<br>따뜻한 홈메이드 브런치.</p>
-    <p class="sub rv rv-d1">화려하기보다 정성스러운 한 접시. 벽돌과 초록이 감싸는 아늑한 공간에서, 소중한 사람과의 오늘을 천천히 채워보세요.</p>
+    <img class="emblem rv" src="ch-emblem.png" alt="체리쉬온 CHERISH ON 로고" width="128" height="128">
+    <p class="lead rv"><em>Cherish</em>, 소중히 여기다.</p>
+    <p class="sub rv rv-d1">대전 관저동 브런치 카페 체리쉬온입니다. ‘소중히 여기다’라는 이름처럼, 오늘 하루도 소중히 여겨지는 날이 되도록 신선하고 맛있는 브런치를 정성껏 준비해 둘게요.</p>
   </section>
 
   <!-- SIGNATURE (editorial bands) -->
@@ -270,14 +288,13 @@ body{padding-bottom:74px}
     <div class="wrap">
       <div class="menu-head rv"><span class="kicker">Menu</span><h2>Menu</h2><div class="h2kr">체리쉬온의 메뉴</div></div>
 
-      <p class="msub rv">인기 메뉴 · Signature</p>
+      <p class="msub rv">대표 메뉴 · Signature</p>
       <div class="mgrid rv">
-        <figure class="mitem"><a class="zoom" href="m-bulgogi-benedict.jpg" target="_blank" rel="noopener"><img src="m-bulgogi-benedict.jpg" loading="lazy" alt="불고기 에그베네딕트"></a><figcaption>불고기 에그베네딕트</figcaption></figure>
-        <figure class="mitem"><a class="zoom" href="m-cream-pasta.jpg" target="_blank" rel="noopener"><img src="m-cream-pasta.jpg" loading="lazy" alt="크림 파스타"></a><figcaption>크림 파스타</figcaption></figure>
-        <figure class="mitem"><a class="zoom" href="m-sausage-risotto.jpg" target="_blank" rel="noopener"><img src="m-sausage-risotto.jpg" loading="lazy" alt="스파이시 킹 소세지 리조또"></a><figcaption>스파이시 킹 소세지 리조또</figcaption></figure>
-        <figure class="mitem"><a class="zoom" href="m-cherishon-plate.jpg" target="_blank" rel="noopener"><img src="m-cherishon-plate.jpg" loading="lazy" alt="체리쉬온 플레이트"></a><figcaption>체리쉬온 플레이트</figcaption></figure>
         <figure class="mitem"><a class="zoom" href="m-hashbrown-benedict.jpg" target="_blank" rel="noopener"><img src="m-hashbrown-benedict.jpg" loading="lazy" alt="해쉬브라운 에그베네딕트"></a><figcaption>해쉬브라운 에그베네딕트</figcaption></figure>
-        <figure class="mitem"><a class="zoom" href="m-french-toast.jpg" target="_blank" rel="noopener"><img src="m-french-toast.jpg" loading="lazy" alt="베이직 프렌치 토스트"></a><figcaption>베이직 프렌치 토스트</figcaption></figure>
+        <figure class="mitem"><a class="zoom" href="m-bulgogi-benedict.jpg" target="_blank" rel="noopener"><img src="m-bulgogi-benedict.jpg" loading="lazy" alt="불고기 에그베네딕트"></a><figcaption>불고기 에그베네딕트</figcaption></figure>
+        <figure class="mitem"><a class="zoom" href="m-cherishon-plate.jpg" target="_blank" rel="noopener"><img src="m-cherishon-plate.jpg" loading="lazy" alt="체리쉬온 플레이트"></a><figcaption>체리쉬온 플레이트</figcaption></figure>
+        <figure class="mitem"><a class="zoom" href="m-basil-cream-pasta.jpg" target="_blank" rel="noopener"><img src="m-basil-cream-pasta.jpg" loading="lazy" alt="바질 크림 파스타"></a><figcaption>바질 크림 파스타</figcaption></figure>
+        <figure class="mitem"><a class="zoom" href="m-sausage-risotto.jpg" target="_blank" rel="noopener"><img src="m-sausage-risotto.jpg" loading="lazy" alt="스파이시 킹 소세지 리조또"></a><figcaption>스파이시 킹 소세지 리조또</figcaption></figure>
       </div>
 
       <button class="menu-toggle" id="menuToggle" aria-expanded="false" aria-controls="menuFull"><span class="mt-label">전체 메뉴 보기</span><span class="mt-ic" aria-hidden="true">+</span></button>
@@ -351,6 +368,22 @@ body{padding-bottom:74px}
     </div>
   </section>
 
+  <!-- RESERVATION -->
+  <section class="resv" id="info">
+    <div class="wrap">
+      <div class="resv-head rv"><span class="kicker">Reservation</span><h2>예약 안내</h2>
+        <p>네이버 예약(바로확정)으로 편하게 방문 예약하실 수 있어요. 2~8인 · 매주 화요일 휴무.</p>
+      </div>
+      <div class="resv-grid">
+        <div class="resv-card rv"><div class="en">Review Gift</div><h3>예약 리뷰 혜택</h3><p>네이버 예약 리뷰를 작성해 주시면 아메리카노(ICE/HOT) 1잔을 드려요!</p></div>
+        <div class="resv-card rv rv-d1"><div class="en">With Kids</div><h3>유아 동반 환영</h3><p>유아의자와 유아식기가 준비되어 있어요. 아이와 함께라면 예약 요청사항에 아이 인원수를 적어 주세요.</p></div>
+        <div class="resv-card rv"><div class="en">Parking</div><h3>주차 무료</h3><p>주차비는 무료예요. 가게 주변 흰 선 구역 어디든 편하게 대시면 됩니다.</p></div>
+        <div class="resv-card rv rv-d1"><div class="en">Before You Book</div><h3>예약 전 확인</h3><p>매장 상황에 따라 예약하셔도 대기가 있을 수 있고, 테이블 지정은 어려워요. 단체 예약은 평일 최대 6인까지 가능하며, 취소는 방문 30분 전까지 연락 부탁드려요.</p></div>
+      </div>
+      <div class="resv-cta rv"><a class="btn-solid" href="https://naver.me/5bXZ089B" target="_blank" rel="noopener">네이버 예약하기 <span aria-hidden="true">&rarr;</span></a></div>
+    </div>
+  </section>
+
   <!-- VISIT RIBBON -->
   <section class="visit" id="visit">
     <div class="visit-grid">
@@ -359,9 +392,9 @@ body{padding-bottom:74px}
         <span class="kicker">Visit Us</span>
         <h2>오시는 길</h2>
         <dl>
-          <dt>Address</dt><dd>대전 서구 구봉산북로7번길 52-9<br>팰리스건물 1층 101호</dd>
+          <dt>Address</dt><dd>대전 서구 관저동<br>구봉산북로7번길 52-9 팰리스건물 1층 101호</dd>
           <dt>Hours</dt><dd><b>매일 10:00 – 17:00</b><br>매주 화요일 휴무</dd>
-          <dt>More</dt><dd>반려견 동반 가능 · 2주년 이벤트 진행 중<br>@_cherish.on_</dd>
+          <dt>More</dt><dd>주차 무료 · 반려견 동반 가능<br>유아의자·유아식기 구비 · @_cherish.on_</dd>
         </dl>
         <div class="visit-cta">
           <a class="btn-cream" href="https://naver.me/5bXZ089B" target="_blank" rel="noopener">네이버 지도·예약 &rarr;</a>
@@ -374,6 +407,7 @@ body{padding-bottom:74px}
 
 <footer>
   <div class="wrap">
+    <img class="f-emblem" src="ch-emblem.png" alt="" width="72" height="72">
     <div class="f-brand">Cherish On</div>
     <p class="f-tag">Fresh · Homemade · Made with care.<br>오늘의 브런치를, 정성껏.</p>
     <div class="f-links">
